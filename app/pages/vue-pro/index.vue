@@ -1,15 +1,17 @@
 <template>
   <UHeader
-      title="Laravel PRO"
-      to="/laravel-pro"
+      title="Vue PRO"
+      to="/vue-pro"
       :ui="{ root: 'border-b border-default bg-default/80' }"
     >
       <template #title>
-        <img
-          :src="laravelProLogo"
-          alt="Laravel PRO"
-          class="h-auto w-[105px]"
-        >
+        <span class="flex items-center gap-2">
+          <UIcon
+            name="i-custom-vue"
+            class="size-8 text-vue"
+          />
+          <span class="font-poppins text-lg font-extrabold tracking-tight">Vue PRO</span>
+        </span>
       </template>
 
       <UNavigationMenu
@@ -20,7 +22,7 @@
 
       <template #right>
         <UButton
-          :href="offerLink.LARAVEL"
+          :href="offerLink.VUE"
           color="cta"
           label="Quero entrar"
           class="hidden sm:inline-flex"
@@ -34,7 +36,7 @@
           class="-mx-2.5"
         />
         <UButton
-          :href="offerLink.LARAVEL"
+          :href="offerLink.VUE"
           color="cta"
           block
           label="Quero entrar"
@@ -49,7 +51,7 @@
         root: 'bg-neutral-950',
         container: 'max-w-5xl',
         wrapper: 'items-start text-left',
-        headline: 'justify-start mb-4 text-xs font-bold uppercase tracking-widest text-laravel font-normal',
+        headline: 'justify-start mb-4 text-xs font-bold uppercase tracking-widest text-vue font-normal',
         title: 'text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-none tracking-tight text-pretty text-highlighted text-left',
         description: 'mt-6 text-left',
         footer: 'mt-7 w-full',
@@ -58,24 +60,24 @@
     >
       <template #headline>
         <span class="inline-block">
-          Laravel PRO — API SaaS
+          Vue PRO — frontend de produto
         </span>
       </template>
 
       <template #title>
         <span class="inline-block">
-          Construa a API do seu SaaS em Laravel
-          <span class="animate-hero-shimmer">sem improviso.</span>
+          Construa o frontend do seu produto em Vue
+          <span class="animate-hero-shimmer">sem atalho.</span>
         </span>
       </template>
 
       <template #description>
         <div class="block">
           <p class="text-lg font-medium text-highlighted">
-            Auth, API RESTful, times, permissões, multi-tenant e deploy.
+            Reatividade, componentes, router, Pinia e deploy.
           </p>
           <p class="mt-3.5 text-lg text-muted">
-            Você entende as decisões técnicas por trás de um SaaS real e termina com uma base sólida pra reutilizar nos próximos projetos.
+            Você entende as decisões por trás de uma SPA real e termina com uma base pra reutilizar nos próximos projetos.
           </p>
         </div>
       </template>
@@ -84,11 +86,11 @@
         <div class="flex flex-col gap-4">
           <div class="flex flex-wrap items-center gap-3">
             <UButton
-              :href="offerLink.LARAVEL"
+              :href="offerLink.VUE"
               color="cta"
               size="xl"
               trailing-icon="i-lucide-arrow-right"
-              label="Quero entrar no Laravel PRO"
+              label="Quero entrar no Vue PRO"
             />
             <UButton
               :to="freeTrialLink"
@@ -126,7 +128,7 @@
         root: 'scroll-mt-[--ui-header-height] border-t border-default',
         container: 'max-w-5xl',
         wrapper: 'items-start text-left',
-        headline: 'justify-start text-laravel',
+        headline: 'justify-start text-vue',
         title: 'max-w-5xl text-3xl sm:text-4xl lg:text-4xl font-extrabold leading-none tracking-tight text-left',
         description: 'text-left space-y-3',
       }"
@@ -147,7 +149,7 @@
           v-bind="scrollMotion(0.08)"
           class="inline-block"
         >
-          O que um backend SaaS precisa ter<br>para crescer sem virar bagunça
+          O que um frontend de produto precisa ter<br>para não virar componente solto
         </Motion>
       </template>
 
@@ -157,7 +159,7 @@
           v-bind="scrollMotion(0.16)"
           class="block"
         >
-          Um SaaS não quebra por falta de endpoint. Ele quebra quando auth, tenant, permissões e deploy são tratados como peças soltas.
+          Uma SPA não quebra por falta de botão. Ela quebra quando reatividade, estado, rotas e deploy são tratados como peças soltas.
         </Motion>
       </template>
 
@@ -181,8 +183,8 @@
                 :title="item.title"
                 :description="item.description"
                 :ui="{
-                  leading: 'flex size-9 items-center justify-center rounded-lg bg-laravel/15 ring-1 ring-laravel/25',
-                  leadingIcon: 'size-5 text-laravel',
+                  leading: 'flex size-9 items-center justify-center rounded-lg bg-vue/15 ring-1 ring-vue/25',
+                  leadingIcon: 'size-5 text-vue',
                   description: 'text-sm leading-relaxed text-muted',
                 }"
               />
@@ -195,7 +197,7 @@
                   :description="topic"
                   :ui="{
                     root: 'py-0.5 first:pt-0 last:pb-0',
-                    leadingIcon: 'size-4 text-laravel',
+                    leadingIcon: 'size-4 text-vue',
                     description: 'text-sm leading-relaxed text-muted',
                   }"
                 />
@@ -220,7 +222,7 @@
           </template>
 
           <template #description>
-            Você constrói uma base backend SaaS peça por peça, entendendo como auth, tenant, permissões e deploy se conectam.
+            Você constrói uma SPA peça por peça, entendendo como reatividade, componentes, estado e rotas se conectam.
           </template>
         </UPageCTA>
         </Motion>
@@ -234,7 +236,7 @@
         root: 'border-t border-default bg-elevated/25',
         container: 'max-w-5xl pb-0 sm:pb-0 lg:pb-0',
         wrapper: 'items-start text-left',
-        headline: 'justify-start text-laravel',
+        headline: 'justify-start text-vue',
         title: 'text-3xl sm:text-4xl lg:text-4xl font-extrabold leading-tighter tracking-tight text-left',
         description: 'text-left max-w-3xl',
         body: 'space-y-10',
@@ -256,8 +258,8 @@
           v-bind="scrollMotion(0.08)"
           class="inline-block"
         >
-          Backend SaaS começa<br>
-          antes do controller.
+          Frontend de produto começa<br>
+          antes do componente.
         </Motion>
       </template>
 
@@ -267,7 +269,7 @@
           v-bind="scrollMotion(0.16)"
           class="inline-block"
         >
-          Antes de abrir o editor, você aprende a pensar o fluxo: estados, regras, exceções e responsabilidades. Depois disso, o código fica mais simples.
+          Antes de abrir o editor, você aprende a pensar o fluxo: estado, computed, eventos e o que a tela precisa mostrar. Depois disso, o código fica mais simples.
         </Motion>
       </template>
 
@@ -284,8 +286,8 @@
             :title="item.title"
             :description="item.description"
             :ui="{
-              leading: 'flex size-9 shrink-0 items-center justify-center rounded-lg bg-laravel/15 ring-1 ring-laravel/25',
-              leadingIcon: 'size-5 text-laravel',
+              leading: 'flex size-9 shrink-0 items-center justify-center rounded-lg bg-vue/15 ring-1 ring-vue/25',
+              leadingIcon: 'size-5 text-vue',
             }"
           />
           </Motion>
@@ -320,7 +322,7 @@
         root: 'border-b border-default bg-elevated/25',
         container: 'max-w-5xl pt-12 sm:pt-12 lg:pt-20',
         wrapper: 'items-start text-left',
-        headline: 'justify-start text-laravel',
+        headline: 'justify-start text-vue',
         title: 'text-3xl sm:text-4xl lg:text-4xl font-extrabold leading-tighter tracking-tight text-left',
         description: 'text-left max-w-3xl',
       }"
@@ -341,8 +343,8 @@
           v-bind="scrollMotion(0.08)"
           class="inline-block"
         >
-          Exemplo: magic link<br>
-          antes do controller.
+          Exemplo: filtro da Tarefinha<br>
+          antes do componente.
         </Motion>
       </template>
 
@@ -352,7 +354,7 @@
           v-bind="scrollMotion(0.16)"
           class="inline-block"
         >
-          Primeiro o fluxo fica claro. Depois cada etapa vira validação, endpoint, evento ou regra de segurança.
+            Primeiro o fluxo fica claro. Depois cada etapa vira v-model, computed, evento ou atualização na tela.
         </Motion>
       </template>
 
@@ -408,7 +410,7 @@
         root: 'scroll-mt-[--ui-header-height]',
         container: 'max-w-5xl',
         wrapper: 'items-start text-left',
-        headline: 'justify-start text-laravel',
+        headline: 'justify-start text-vue',
         title: 'text-3xl sm:text-4xl lg:text-4xl font-extrabold leading-tighter tracking-tight text-left',
         description: 'text-left max-w-3xl',
         body: 'space-y-4',
@@ -430,7 +432,7 @@
           v-bind="scrollMotion(0.08)"
           class="inline-block"
         >
-          Do básico ao backend SaaS<br>
+          Do básico à SPA<br>
           em produção
         </Motion>
       </template>
@@ -441,7 +443,7 @@
           v-bind="scrollMotion(0.16)"
           class="inline-block"
         >
-          Você começa reforçando a base, organiza a arquitetura, evolui para API, implementa autenticação, entra em multi-tenancy (em construção) e finaliza colocando o projeto no ar.
+          Você começa reforçando a base, aprofunda reatividade, entra em rotas, composables, Pinia e finaliza colocando o projeto no ar.
         </Motion>
       </template>
 
@@ -458,10 +460,10 @@
         >
           <div class="space-y-5">
             <div class="flex items-start gap-4">
-              <div class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-laravel/15 ring-1 ring-laravel/25">
+              <div class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-vue/15 ring-1 ring-vue/25">
                 <UIcon
                   :name="modulo.icon"
-                  class="size-5 text-laravel"
+                  class="size-5 text-vue"
                 />
               </div>
 
@@ -499,7 +501,7 @@
                 icon="i-lucide-check"
                 :description="bullet"
                 :ui="{
-                  leadingIcon: 'size-4 text-laravel',
+                  leadingIcon: 'size-4 text-vue',
                   description: 'text-sm leading-relaxed text-muted',
                 }"
               />
@@ -515,7 +517,7 @@
         >
         <UPageCard
           variant="subtle"
-          class="bg-laravel/5 ring-1 ring-laravel/20"
+          class="bg-vue/5 ring-1 ring-vue/20"
           :ui="{
             description: 'text-muted',
           }"
@@ -525,7 +527,7 @@
           </template>
 
           <template #description>
-            A ideia não é pular de assunto em assunto. É construir uma base backend SaaS com ordem, contexto e propósito.
+            A ideia não é pular de assunto em assunto. É construir uma SPA com ordem, contexto e propósito.
           </template>
         </UPageCard>
         </Motion>
@@ -550,19 +552,19 @@
             >
               <h2 class="text-3xl font-extrabold leading-tighter text-highlighted sm:text-4xl">
                 Se a IA já escreve código,<br>
-                <span class="text-laravel">por que aprender Laravel?</span>
+                <span class="text-vue">por que aprender Vue?</span>
               </h2>
 
               <p class="max-w-2xl text-base leading-relaxed text-muted">
-                A IA pode gerar arquivos, controllers e endpoints em segundos. Mas ela não sabe, sozinha, se aquele código faz sentido no seu SaaS: tenant, permissões, segurança, arquitetura e regra de negócio ainda exigem critério técnico.
+                A IA pode gerar componentes, stores e rotas em segundos. Mas ela não sabe, sozinha, se aquele código faz sentido no seu produto: reatividade, estado compartilhado, ciclo de vida e o que deveria ser um composable ainda exigem critério técnico.
               </p>
             </Motion>
 
             <Motion
               v-bind="scrollMotion(0.12)"
-              class="rounded-lg border border-laravel/25 bg-laravel/8 p-5 sm:p-6"
+              class="rounded-lg border border-vue/25 bg-vue/8 p-5 sm:p-6"
             >
-              <p class="text-xs font-bold uppercase tracking-[0.14em] text-laravel">
+              <p class="text-xs font-bold uppercase tracking-[0.14em] text-vue">
                 O ponto não é escrever mais rápido
               </p>
               <p class="mt-3 text-xl font-bold leading-snug text-highlighted">
@@ -608,10 +610,10 @@
 
             <div class="border-t border-default bg-elevated/35 p-5 sm:p-6 lg:border-l lg:border-t-0">
               <div class="mb-5 flex items-center gap-3">
-                <span class="flex size-9 items-center justify-center rounded-lg bg-laravel/15 ring-1 ring-laravel/25">
+                <span class="flex size-9 items-center justify-center rounded-lg bg-vue/15 ring-1 ring-vue/25">
                   <UIcon
                     name="i-lucide-brain"
-                    class="size-5 text-laravel"
+                    class="size-5 text-vue"
                   />
                 </span>
                 <h3 class="text-lg font-bold text-highlighted">
@@ -627,7 +629,7 @@
                 >
                   <UIcon
                     name="i-lucide-arrow-right"
-                    class="mt-0.5 size-4 shrink-0 text-laravel"
+                    class="mt-0.5 size-4 shrink-0 text-vue"
                   />
                   <span>{{ item }}</span>
                 </li>
@@ -647,7 +649,7 @@
         root: 'scroll-mt-[--ui-header-height] border-t border-default',
         container: 'max-w-5xl',
         wrapper: 'items-start text-left',
-        headline: 'text-center text-laravel',
+        headline: 'text-center text-vue',
         title: 'max-w-3xl mx-auto text-center text-balance text-3xl sm:text-4xl lg:text-4xl font-extrabold leading-tighter tracking-tight',
         body: 'w-full',
       }"
@@ -754,7 +756,7 @@
         root: 'scroll-mt-[--ui-header-height] border-y border-default bg-elevated/15',
         container: 'max-w-5xl',
         wrapper: 'items-start text-left',
-        headline: 'justify-start text-laravel',
+        headline: 'justify-start text-vue',
         title: 'text-3xl sm:text-4xl lg:text-4xl font-extrabold leading-tighter tracking-tight text-left',
         description: 'text-left max-w-3xl',
         body: 'space-y-6',
@@ -766,7 +768,7 @@
           v-bind="scrollMotion()"
           class="inline-block"
         >
-          Acesso ao Laravel PRO
+          Acesso ao Vue PRO
         </Motion>
       </template>
 
@@ -776,7 +778,7 @@
           v-bind="scrollMotion(0.08)"
           class="inline-block"
         >
-          Entre no Laravel PRO e <br class="hidden sm:block">construa seu <span class="whitespace-nowrap">backend SaaS</span>
+          Entre no Vue PRO e <br class="hidden sm:block">construa seu <span class="whitespace-nowrap">frontend de produto</span>
         </Motion>
       </template>
 
@@ -786,7 +788,7 @@
           v-bind="scrollMotion(0.16)"
           class="inline-block"
         >
-          Acesse a trilha completa para construir, entender e evoluir uma base backend SaaS em Laravel — com suporte, atualizações e comunidade.
+          Acesse a trilha completa para construir, entender e evoluir uma SPA em Vue — com suporte, atualizações e comunidade.
         </Motion>
       </template>
 
@@ -847,7 +849,7 @@
           <USeparator
             class="w-full"
             size="sm"
-            :ui="{ border: 'border-laravel/25' }"
+            :ui="{ border: 'border-vue/25' }"
           />
 
           <div class="flex flex-col items-center">
@@ -870,14 +872,14 @@
               </div>
 
               <UButton
-                :href="offerLink.LARAVEL"
+                :href="offerLink.VUE"
                 color="cta"
                 size="3xl"
                 block
                 trailing-icon="i-lucide-arrow-right"
               >
                 <span class="sm:hidden">Quero entrar</span>
-                <span class="hidden sm:inline">Quero entrar no Laravel PRO</span>
+                <span class="hidden sm:inline">Quero entrar no Vue PRO</span>
               </UButton>
 
               <div class="space-y-2 text-center">
@@ -954,7 +956,7 @@
         root: 'border-t border-default',
         container: 'max-w-3xl',
         wrapper: 'items-start text-left',
-        headline: 'text-laravel justify-start',
+        headline: 'text-vue justify-start',
         title: 'max-w-2xl text-left text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl lg:text-5xl',
         description: 'max-w-2xl text-left',
       }"
@@ -985,7 +987,7 @@
           v-bind="scrollMotion(0.18)"
           class="inline-block"
         >
-          Entre no Laravel PRO e aprenda a construir uma base backend SaaS em Laravel — com auth, arquitetura, tenant, permissões e deploy.
+          Entre no Vue PRO e aprenda a construir uma SPA em Vue — com reatividade, router, Pinia, composables e deploy.
         </Motion>
       </template>
 
@@ -995,11 +997,11 @@
           class="block"
         >
         <UButton
-          :href="offerLink.LARAVEL"
+          :href="offerLink.VUE"
           color="cta"
           size="lg"
           trailing-icon="i-lucide-arrow-right"
-          label="Quero entrar no Laravel PRO"
+          label="Quero entrar no Vue PRO"
         />
         <p class="mt-8 w-full border-t border-default pt-5 text-sm text-dimmed">
           Acesso imediato · Garantia de 7 dias · Devolução 100% sem burocracia
@@ -1015,7 +1017,6 @@
 import AppFooter from '~/components/App/AppFooter.vue'
 import PageAbout from '~/components/Page/PageAbout.vue'
 import PageTestimonial from '~/components/Page/PageTestimonial.vue'
-import laravelProLogo from '~/assets/img/LaravelPro-WhiteColor.svg'
 
 definePageMeta({
   layout: false,
@@ -1072,8 +1073,8 @@ function priceMotion() {
   }
 }
 
-const freeTrialLink = { name: 'laravel-pro-2-dias-gratis' }
-const whatsappLink = useWhatsappLink('Olá Tiago! Tenho uma dúvida sobre o Laravel PRO.')
+const freeTrialLink = { name: 'vue-pro-2-dias-gratis' }
+const whatsappLink = useWhatsappLink('Olá Tiago! Tenho uma dúvida sobre o Vue PRO.')
 
 const headerMenu = [
   { label: 'Mapa', to: '#mapa' },
@@ -1132,28 +1133,28 @@ const learnCtaLinks = [{
 
 const learnItems = [
   {
-    icon: 'i-lucide-lock-keyhole',
-    title: 'Auth de produto',
-    description: 'Fluxos de autenticação que fazem sentido para produto: senha, token, recuperação, magic link e login social.',
-    topics: ['Sanctum', 'Login com senha', 'Magic link', 'Login social'],
+    icon: 'i-lucide-sparkles',
+    title: 'Reatividade de verdade',
+    description: 'Você entende o que dispara a tela: v-model, computed, watch e quando cada um faz sentido.',
+    topics: ['v-model', 'Computed', 'Watch', 'Ciclo de vida'],
   },
   {
     icon: 'i-lucide-boxes',
-    title: 'Arquitetura organizada',
-    description: 'Estrutura de projeto pensada para crescer sem virar uma pasta app/ impossível de manter.',
-    topics: ['Módulos', 'Organização por feature', 'Responsabilidades claras', 'Código fácil de manter'],
+    title: 'Componentes que conversam',
+    description: 'Props, eventos e responsabilidade clara — o componente não vira um arquivo impossível de abrir.',
+    topics: ['Props', 'Eventos', 'Composição', 'Reuso'],
   },
   {
-    icon: 'i-lucide-building-2',
-    title: 'Tenant e permissões',
-    description: 'A parte que separa CRUD simples de backend SaaS real: times, organizações, papéis e isolamento de dados. Em construção na trilha.',
-    topics: ['Times', 'Organizações', 'Roles', 'Isolamento por tenant'],
+    icon: 'i-lucide-database',
+    title: 'Estado de produto',
+    description: 'Pinia com state, getters e actions. O carrinho, a lista e o filtro deixam de viver espalhados na tela.',
+    topics: ['State', 'Getters', 'Actions', 'Projeto Pinia'],
   },
   {
     icon: 'i-lucide-rocket',
-    title: 'API pronta para sair do localhost',
-    description: 'Endpoints organizados, validados, consumíveis pelo front e preparados para ir ao ar.',
-    topics: ['API Resources', 'Validação', 'Filtros', 'Deploy'],
+    title: 'SPA pronta para sair do localhost',
+    description: 'Rotas, composables e deploy. O app deixa a máquina e vira URL.',
+    topics: ['Vue Router', 'Composables', 'Vuetify Cart', 'Deploy'],
   },
 ]
 
@@ -1161,22 +1162,22 @@ const engineeringThinkingItems = [
   {
     icon: 'i-lucide-route',
     title: 'Desenhar antes de implementar',
-    description: 'Entradas, saídas, estados e caminhos alternativos antes do controller nascer.',
+    description: 'O que a tela mostra, o que o usuário faz e o que muda no estado — antes do componente nascer.',
   },
   {
     icon: 'i-lucide-git-branch',
-    title: 'Prever regras e exceções',
-    description: 'Convite expirado, tenant errado, permissão negada e token inválido entram no plano.',
+    title: 'Prever estados e vazios',
+    description: 'Lista vazia, filtro sem resultado, item removido e loading entram no plano.',
   },
   {
     icon: 'i-lucide-message-square-code',
     title: 'Comunicar decisões técnicas',
-    description: 'Você aprende a explicar por que a solução existe e quais trade-offs foram feitos.',
+    description: 'Você aprende a explicar por que é computed e não watch, e por que o estado mora no Pinia.',
   },
   {
     icon: 'i-lucide-brain',
     title: 'Codar com intenção',
-    description: 'Cada endpoint nasce de um fluxo claro, não de tentativa e erro.',
+    description: 'Cada componente nasce de um fluxo claro, não de tentativa e erro no template.',
   },
 ]
 
@@ -1184,46 +1185,46 @@ const magicLinkFlowItems = [
   {
     kicker: '01',
     type: 'start',
-    title: 'Pede acesso',
-    description: 'Email informado',
+    title: 'Digita a busca',
+    description: 'Texto no input',
   },
   {
     kicker: '02',
     type: 'process',
-    title: 'Gerar link',
-    description: 'Token + expiração',
+    title: 'v-model',
+    description: 'Estado local',
   },
   {
     kicker: '03',
     type: 'process',
-    title: 'Enviar email',
-    description: 'Link de login',
+    title: 'Computed filtra',
+    description: 'Lista derivada',
   },
   {
     kicker: '04',
     type: 'decision',
-    title: 'Validar token',
-    description: 'Usuário + prazo',
-    branch: 'não -> 422',
+    title: 'Tem resultado?',
+    description: 'Itens ou vazio',
+    branch: 'não -> empty',
   },
   {
     kicker: '05',
     type: 'success',
-    title: 'Login feito',
-    description: 'Sessão + user',
+    title: 'Tela atualiza',
+    description: 'UI reativa',
   },
 ]
 
 const praQuemSim = [
-  'Já usa Laravel, mas trava em tenant, permissões e arquitetura.',
-  'Quer construir backend profissional para Vue, React ou mobile.',
+  'Já usa Vue, mas trava em Pinia, router e composição.',
+  'Quer frontend profissional para consumir API (Laravel ou outra).',
   'É freelancer/indie hacker e quer parar de começar tudo do zero.',
-  'Quer entender o porquê das decisões, não só decorar sintaxe.',
+  'Quer entender o porquê das decisões, não só copiar Options API.',
 ]
 
 const praQuemNao = [
   'Procura boilerplate pronto para copiar e colar sem entender.',
-  'Quer um curso só de frontend.',
+  'Quer um curso só de backend.',
   'Espera teoria sem colocar a mão no código.',
   'Não quer estudar, praticar e revisar seus próprios erros.',
 ]
@@ -1232,7 +1233,7 @@ const offerProgramDetails = [
   { label: 'Formato', value: 'Trilha online 100% gravada' },
   { label: 'Acesso', value: 'Imediato após pagamento' },
   { label: 'Ritmo', value: 'No seu próprio ritmo' },
-  { label: 'Pré-requisito', value: 'PHP OO e banco de dados', faqValue: 'conhecimentos' },
+  { label: 'Pré-requisito', value: 'HTML, CSS e JavaScript', faqValue: 'conhecimentos' },
   { label: 'Atualizações', value: 'Inclusas sem custo extra' },
   { label: 'Garantia', value: '7 dias com reembolso integral' },
 ]
@@ -1247,106 +1248,108 @@ const offerIncludedBenefits = [
 
 const modulos = [
   {
-    title: 'Laravel Básico',
+    title: 'Vue Básico',
     icon: 'i-lucide-book-open',
-    intro: 'Pra quem precisa fortalecer a base antes de entrar na parte de API e SaaS.',
-    bullets: ['MVC, rotas e controllers', 'Eloquent e relacionamentos', 'Dashboard AdminLTE'],
+    intro: 'Pra quem precisa fortalecer a base antes de entrar em reatividade avançada e estado.',
+    bullets: ['Introdução e ambiente', 'O básico bem feito', 'Projeto Tarefinha'],
   },
   {
-    title: 'Arquitetura Profissional',
-    icon: 'i-lucide-boxes',
-    intro: 'Você aprende a organizar o Laravel para o projeto crescer sem virar uma pasta app/ impossível de manter.',
-    bullets: ['Modularização', 'Organização por feature', 'Estrutura escalável'],
+    title: 'Vue Avançado',
+    icon: 'i-lucide-sparkles',
+    intro: 'Aqui a reatividade deixa de ser mágica: você entende o que atualiza a tela e por quê.',
+    bullets: ['v-model, computed e watch', 'Props e eventos', 'Ciclo de vida do componente'],
   },
   {
-    title: 'Laravel API',
-    icon: 'i-lucide-plug',
-    intro: 'Aqui você começa a construir o backend que será consumido por front-end, mobile ou qualquer cliente externo.',
-    bullets: ['API RESTful e API Resources', 'Validação e endpoints aninhados', 'Filtros, boas práticas e CORS'],
+    title: 'Vue Router',
+    icon: 'i-lucide-route',
+    intro: 'A SPA precisa de rotas de verdade — não de um único arquivo com v-if.',
+    bullets: ['Básico', 'Avançado', 'Truques'],
   },
   {
-    title: 'Autenticação',
-    icon: 'i-lucide-lock-keyhole',
-    badge: 'Em expansão',
-    intro: 'A parte que quase todo SaaS precisa, mas que muita gente implementa só pela metade.',
-    bullets: ['Sanctum, login e recuperação de senha', 'Login com código e magic link', 'Login social'],
+    title: 'Vue Composables',
+    icon: 'i-lucide-blocks',
+    intro: 'Lógica reutilizável fora do componente. O projeto da trilha é o carrinho com Vuetify.',
+    bullets: ['Vuetify Cart', 'Adicionar e remover itens', 'Subtotal e total reativos'],
   },
   {
-    title: 'Multi-tenancy',
-    icon: 'i-lucide-building-2',
-    badge: 'Em construção',
-    intro: 'Times, organizações, contexto de tenant e isolamento de dados. Em construção — incluso nas atualizações do ano.',
-    bullets: ['Organizações e times', 'Tenant context e isolamento de dados', 'Permissões'],
+    title: 'Vue Pinia',
+    icon: 'i-lucide-database',
+    intro: 'Estado de produto: state, getters, actions e um projeto pra cravar.',
+    bullets: ['Camadas state, getters e actions', 'Projeto ordem de serviço', 'Extras'],
   },
   {
-    title: 'Deploy',
+    title: 'Vue Deploy',
     icon: 'i-lucide-rocket',
-    intro: 'Porque backend bom não pode morrer no localhost.',
-    bullets: ['Cloudflare e VPS', 'Laravel Forge', 'Deploy de projetos Laravel'],
+    intro: 'Porque frontend bom não pode morrer no localhost.',
+    bullets: ['Cloudflare e VPS', 'Laravel Forge', 'Deploy de projetos Vue'],
   },
 ]
 
 const aiHandlesItems = [
-  'Models, migrations, controllers e requests',
-  'CRUD básico e endpoints repetitivos',
-  'Validações, resources e boilerplate',
+  'Componentes, props e templates',
+  'CRUD de tela e listas repetitivas',
+  'Stores Pinia e rotas básicas',
   'Código que economiza tempo',
 ]
 
 const aiDecisionItems = [
-  'Se a estrutura faz sentido para um SaaS real',
-  'Onde começa e termina o contexto do tenant',
-  'Qual regra pertence ao domínio, não ao controller',
-  'Como proteger permissões sem vazar dados',
+  'Se o estado deve ser local ou Pinia',
+  'O que é computed e o que é watch',
+  'Onde um composable começa e o componente termina',
+  'Como a rota e o estado se conectam sem vazar dados',
 ]
 
 const faqItems = [
   {
-    label: 'Preciso já saber Laravel?',
-    content: '<p>Não. A trilha começa no Laravel Básico. Se você já usa Laravel no dia a dia, avança mais rápido para API, arquitetura e autenticação.</p>',
+    label: 'Preciso já saber Vue?',
+    content: '<p>Não. A trilha começa no Vue Básico. Se você já monta tela em Vue, avança mais rápido para Router, composables e Pinia.</p>',
   },
   {
     value: 'conhecimentos',
     label: 'Quais conhecimentos eu preciso ter antes de começar?',
-    content: '<p>Você não precisa ser expert em Laravel, porque a trilha reforça a base.</p><p>Pra acompanhar bem: lógica de programação, PHP orientado a objetos, banco relacional e o básico de HTTP.</p><p>Se você ainda está no PHP do zero, fortalece isso primeiro. O Laravel PRO é pra quem quer sair do CRUD solto e construir backend de produto.</p>',
+    content: '<p>Você não precisa ser expert em Vue, porque a trilha reforça a base.</p><p>Pra acompanhar bem: HTML, CSS e JavaScript — lógica, funções e o DOM.</p><p>Se você ainda está no JS do zero, fortalece isso primeiro. O Vue PRO é pra quem quer sair do tutorial solto e construir frontend de produto.</p>',
   },
   {
-    label: 'O curso tem frontend?',
-    content: '<p>O foco é backend API em Laravel.</p><p>Tem um playground em Vue só pra testar a API e ver o backend sendo consumido de verdade — não é aula de Vue. Frontend de produto é o Vue PRO.</p>',
+    label: 'O curso tem backend?',
+    content: '<p>Não. Vue PRO é frontend: componentes, rotas, estado e deploy da SPA.</p><p>Backend entra só como o que a interface consome. API SaaS em Laravel é o Laravel PRO.</p>',
   },
   {
-    label: 'Multi-tenancy já está disponível?',
-    content: '<p>Ainda não. O módulo de multi-tenancy está em construção.</p><p>Quem entra agora já leva o acesso de 1 ano: quando as aulas saírem, entram sem custo extra.</p>',
+    label: 'É Vue 3 e Composition API?',
+    content: '<p>Sim. A trilha é Vue 3 com Composition API, Vue Router, composables e Pinia — não é um curso de Options API legado.</p>',
   },
   {
-    label: 'Qual a diferença para um starter kit?',
-    content: '<p>Starter kit entrega código pronto. O Laravel PRO te ensina a construir auth, API, arquitetura e deploy — pra você não depender de uma caixa-preta quando o SaaS crescer.</p>',
+    label: 'Quais projetos eu vou construir?',
+    content: '<p>A Tarefinha (lista reativa), um carrinho com Vuetify pra cravar composables, e uma ordem de serviço com Pinia. No fim, deploy da SPA.</p>',
+  },
+  {
+    label: 'O Vue PRO inclui Laravel ou o AgendaMe?',
+    content: '<p>Não. Vue PRO é só a trilha de frontend. Laravel PRO e AgendaMe são cursos separados.</p>',
   },
   {
     label: 'Por quanto tempo tenho acesso?',
-    content: '<p>1 ano de acesso à trilha Laravel PRO, incluindo aulas novas adicionadas nesse período.</p>',
+    content: '<p>1 ano de acesso à trilha Vue PRO, incluindo aulas novas adicionadas nesse período.</p>',
   },
   {
     label: 'Tem suporte?',
-    content: '<p>Sim. Dúvida de aula do Laravel PRO: WhatsApp direto comigo e grupo exclusivo de alunos.</p>',
+    content: '<p>Sim. Dúvida de aula do Vue PRO: WhatsApp direto comigo e grupo exclusivo de alunos.</p>',
   },
   {
     label: 'Posso testar antes de comprar?',
-    content: `<p>Sim. 2 dias grátis no Laravel PRO, sem cartão e sem compromisso — pra ver a didática e a trilha de backend SaaS antes de entrar.</p><p><a href="/laravel-pro/2-dias-gratis" class="font-semibold text-laravel underline underline-offset-4">Testar 2 dias grátis</a></p>`,
+    content: `<p>Sim. 2 dias grátis no Vue PRO, sem cartão e sem compromisso — pra ver a didática e a trilha de frontend antes de entrar.</p><p><a href="/vue-pro/2-dias-gratis" class="font-semibold text-vue underline underline-offset-4">Testar 2 dias grátis</a></p>`,
   },
   {
     label: 'Posso tirar dúvidas antes de entrar?',
-    content: `<p>Sim. Qualquer dúvida sobre o Laravel PRO, chama no <a href="${whatsappLink}" target="_blank" rel="noopener noreferrer" class="font-medium text-success underline-offset-4 transition-colors hover:underline">WhatsApp</a> antes de comprar.</p>`,
+    content: `<p>Sim. Qualquer dúvida sobre o Vue PRO, chama no <a href="${whatsappLink}" target="_blank" rel="noopener noreferrer" class="font-medium text-success underline-offset-4 transition-colors hover:underline">WhatsApp</a> antes de comprar.</p>`,
   },
   {
     label: 'Tem garantia?',
-    content: '<p>Sim. 7 dias pra testar o Laravel PRO. Se não fizer sentido, reembolso integral.</p>',
+    content: '<p>Sim. 7 dias pra testar o Vue PRO. Se não fizer sentido, reembolso integral.</p>',
   },
 ]
 
 useSeoMeta({
-  title: 'Laravel PRO — API SaaS | Tiago Matos',
-  description: 'Construa o backend do seu SaaS em Laravel: auth, API RESTful, multi-tenant e deploy. Base sólida pra reutilizar nos próximos projetos. Garantia de 7 dias.',
+  title: 'Vue PRO — frontend de produto | Tiago Matos',
+  description: 'Construa o frontend do seu produto em Vue: reatividade, router, Pinia, composables e deploy. Base sólida pra reutilizar nos próximos projetos. Garantia de 7 dias.',
 })
 </script>
 
@@ -1370,11 +1373,11 @@ html {
 .animate-hero-shimmer {
   background-image: linear-gradient(
     135deg,
-    #ff7a5c,
-    #ffb199,
-    #ffd4c8,
-    #ffb199,
-    #ff7a5c
+    #42b883,
+    #7ed7b3,
+    #c6f0de,
+    #7ed7b3,
+    #42b883
   );
   background-size: 200% auto;
   background-clip: text;
@@ -1470,7 +1473,7 @@ html {
   position: relative;
   width: 2px;
   height: 1.7rem;
-  border-left: 2px dashed color-mix(in srgb, var(--color-laravel) 85%, white);
+  border-left: 2px dashed color-mix(in srgb, var(--color-vue) 85%, white);
 }
 
 .excalidraw-arrow::after {
@@ -1480,8 +1483,8 @@ html {
   bottom: -1px;
   width: 9px;
   height: 9px;
-  border-bottom: 2px solid color-mix(in srgb, var(--color-laravel) 85%, white);
-  border-right: 2px solid color-mix(in srgb, var(--color-laravel) 85%, white);
+  border-bottom: 2px solid color-mix(in srgb, var(--color-vue) 85%, white);
+  border-right: 2px solid color-mix(in srgb, var(--color-vue) 85%, white);
   transform: rotate(45deg);
 }
 
@@ -1494,7 +1497,7 @@ html {
   .excalidraw-arrow {
     width: 1.7rem;
     height: 2px;
-    border-top: 2px dashed color-mix(in srgb, var(--color-laravel) 85%, white);
+    border-top: 2px dashed color-mix(in srgb, var(--color-vue) 85%, white);
     border-left: 0;
   }
 
@@ -1503,8 +1506,8 @@ html {
     left: auto;
     top: -5px;
     bottom: auto;
-    border-top: 2px solid color-mix(in srgb, var(--color-laravel) 85%, white);
-    border-right: 2px solid color-mix(in srgb, var(--color-laravel) 85%, white);
+    border-top: 2px solid color-mix(in srgb, var(--color-vue) 85%, white);
+    border-right: 2px solid color-mix(in srgb, var(--color-vue) 85%, white);
     border-bottom: 0;
   }
 }

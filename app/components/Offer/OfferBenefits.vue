@@ -16,7 +16,7 @@ const benefits = [
   'Todos os cursos da Jornada incluídos',
   '1 ano de acesso ilimitado',
   'Suporte direto comigo via WhatsApp',
-  'Grupo exclusivo de alunos no Discord e WhatsApp',
+  'Grupo exclusivo de alunos no WhatsApp',
   'Projeto SaaS completo incluso',
   'Acesso às MasterClasses exclusivas',
   'Novas aulas e cursos adicionados regularmente',

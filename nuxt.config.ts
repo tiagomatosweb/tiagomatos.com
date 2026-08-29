@@ -75,6 +75,8 @@ export default defineNuxtConfig({
     '/**/obrigado': {robots: false},
     '/jornada-laravel': { redirect: '/laravel-pro', prerender: false },
     '/jornada-laravel/**': { redirect: '/laravel-pro', prerender: false },
+    '/jornada-vue': { redirect: '/vue-pro', prerender: false },
+    '/jornada-vue/**': { redirect: '/vue-pro', prerender: false },
   },
 
   googleFonts: {

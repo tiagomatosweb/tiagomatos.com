@@ -11,10 +11,10 @@
           alt="Laravel PRO">
       </NuxtLink>
 
-      <NuxtLink :to="{ name: 'jornada-vue'}">
+      <NuxtLink :to="{ name: 'vue-pro' }">
         <img
           src="@/assets/img/jornada-vue-banner.webp"
-          alt="Jornada Vue">
+          alt="Vue PRO">
       </NuxtLink>
     </div>
   </div>
