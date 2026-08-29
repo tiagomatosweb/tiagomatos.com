@@ -9,7 +9,6 @@
 
     <template #after-description>
       <div class="flex justify-center flex-wrap lg:justify-start gap-6 mt-6">
-        <BadgeCourseCount :number="stats?.courses_count"/>
         <BadgeLectureCount :number="stats?.lectures_count"/>
         <BadgeDuration :duration="stats?.duration"/>
       </div>
@@ -75,7 +74,6 @@ import LpVueAulasGratuitas from '~/pages/jornada-vue/_partials/LpVueAulasGratuit
 import LpVueOffer from '~/pages/jornada-vue/_partials/LpVueOffer.vue';
 import PageAbout from '~/components/Page/PageAbout.vue';
 import LpVueProjetosReais from '~/pages/jornada-vue/_partials/LpVueProjetosReais.vue';
-import BadgeCourseCount from '~/components/BadgeCourseCount.vue';
 import BadgeDuration from '~/components/BadgeDuration.vue';
 import BadgeLectureCount from '~/components/BadgeLectureCount.vue';
 definePageMeta({

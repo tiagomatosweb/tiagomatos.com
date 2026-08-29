@@ -33,7 +33,7 @@
 
         <StartTrialForm
           v-else
-          :product-id="2"
+          course-id="vue-pro"
           :button-props="{
             label: 'Garantir 2 dias grátis'
           }"

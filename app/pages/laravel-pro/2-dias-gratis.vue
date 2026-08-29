@@ -57,7 +57,7 @@
           </p>
 
           <StartTrialForm
-            :product-id="1"
+            course-id="laravel-pro"
             :button-props="{
               label: 'Liberar meus 2 dias grátis',
             }"

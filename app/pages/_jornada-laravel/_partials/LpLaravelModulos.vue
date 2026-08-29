@@ -6,7 +6,7 @@
   >
     <div class="column-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
       <UCard
-        v-for="(item, index) in data?.sections"
+        v-for="(item, index) in data?.nodes"
         variant="soft"
         class="break-inside-avoid"
       >
@@ -33,7 +33,7 @@
 
 <script setup>
 import LandingSection from '~/components/Landing/LandingSection.vue';
-const { data } = useApiFetch('api/courses/laravel-pro', {
+const { data } = useApiFetch('api/course-by-slug/laravel-pro', {
   lazy: true,
   transform: (response) => response.data,
 })
