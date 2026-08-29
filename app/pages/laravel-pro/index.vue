@@ -441,7 +441,7 @@
           v-bind="scrollMotion(0.16)"
           class="inline-block"
         >
-          Você começa reforçando a base, evolui para API, organiza a arquitetura, implementa autenticação, entra em multi-tenancy e finaliza colocando o projeto no ar.
+          Você começa reforçando a base, organiza a arquitetura, evolui para API, implementa autenticação, entra em multi-tenancy (em construção) e finaliza colocando o projeto no ar.
         </Motion>
       </template>
 
@@ -1146,7 +1146,7 @@ const learnItems = [
   {
     icon: 'i-lucide-building-2',
     title: 'Tenant e permissões',
-    description: 'A parte que separa CRUD simples de backend SaaS real: times, organizações, papéis e isolamento de dados.',
+    description: 'A parte que separa CRUD simples de backend SaaS real: times, organizações, papéis e isolamento de dados. Em construção na trilha.',
     topics: ['Times', 'Organizações', 'Roles', 'Isolamento por tenant'],
   },
   {
@@ -1241,7 +1241,7 @@ const offerIncludedBenefits = [
   '1 ano de acesso ilimitado',
   'Suporte direto comigo via WhatsApp',
   'Grupo exclusivo de alunos no Discord e WhatsApp',
-  'Novas aulas e cursos adicionados regularmente',
+  'Novas aulas adicionadas regularmente',
   'Certificado digital de conclusão',
 ]
 
@@ -1250,19 +1250,19 @@ const modulos = [
     title: 'Laravel Básico',
     icon: 'i-lucide-book-open',
     intro: 'Pra quem precisa fortalecer a base antes de entrar na parte de API e SaaS.',
-    bullets: ['MVC, rotas e controllers', 'Eloquent e relacionamentos', 'Validação'],
-  },
-  {
-    title: 'Laravel API',
-    icon: 'i-lucide-plug',
-    intro: 'Aqui você começa a construir o backend que será consumido por front-end, mobile ou qualquer cliente externo.',
-    bullets: ['API RESTful e API Resources', 'Validação e endpoints aninhados', 'Filtros, boas práticas e CORS'],
+    bullets: ['MVC, rotas e controllers', 'Eloquent e relacionamentos', 'Dashboard AdminLTE'],
   },
   {
     title: 'Arquitetura Profissional',
     icon: 'i-lucide-boxes',
     intro: 'Você aprende a organizar o Laravel para o projeto crescer sem virar uma pasta app/ impossível de manter.',
     bullets: ['Modularização', 'Organização por feature', 'Estrutura escalável'],
+  },
+  {
+    title: 'Laravel API',
+    icon: 'i-lucide-plug',
+    intro: 'Aqui você começa a construir o backend que será consumido por front-end, mobile ou qualquer cliente externo.',
+    bullets: ['API RESTful e API Resources', 'Validação e endpoints aninhados', 'Filtros, boas práticas e CORS'],
   },
   {
     title: 'Autenticação',
@@ -1275,7 +1275,7 @@ const modulos = [
     title: 'Multi-tenancy',
     icon: 'i-lucide-building-2',
     badge: 'Em construção',
-    intro: 'Você aprende a lidar com times, organizações, contexto de tenant e isolamento de dados.',
+    intro: 'Times, organizações, contexto de tenant e isolamento de dados. Em construção — incluso nas atualizações do ano.',
     bullets: ['Organizações e times', 'Tenant context e isolamento de dados', 'Permissões'],
   },
   {
@@ -1328,7 +1328,7 @@ const faqItems = [
   },
   {
     label: 'Posso testar antes de comprar?',
-    content: `<p>Sim. Você pode acessar o Laravel PRO por 2 dias grátis, sem cartão de crédito e sem compromisso.</p><p>Assim você conhece a didática, vê a estrutura da trilha e decide se o curso faz sentido pra você antes de entrar de vez.</p><p><a href="${freeTrialLink}" class="font-semibold text-laravel underline underline-offset-4">Testar 2 dias grátis</a></p>`,
+    content: `<p>Sim. Você pode acessar o Laravel PRO por 2 dias grátis, sem cartão de crédito e sem compromisso.</p><p>Assim você conhece a didática, vê a estrutura da trilha e decide se o curso faz sentido pra você antes de entrar de vez.</p><p><a href="/laravel-pro/2-dias-gratis" class="font-semibold text-laravel underline underline-offset-4">Testar 2 dias grátis</a></p>`,
   },
   {
     label: 'Posso tirar dúvidas antes de entrar?',

@@ -19,7 +19,7 @@
 
       <template #description>
         <p class="text-lg text-muted">
-          Acesse o Laravel PRO sem cartão, sem compromisso e conheça a trilha que te mostra como construir backend SaaS em Laravel — com API, auth, arquitetura, tenant, permissões e deploy.
+          Acesse o Laravel PRO sem cartão, sem compromisso e conheça a trilha de backend SaaS em Laravel — API, auth, arquitetura e deploy. Multi-tenancy está em construção e entra nas atualizações.
         </p>
 
         <ul class="mt-6 space-y-2.5">
@@ -91,7 +91,7 @@
 
       <template #description>
         <p>
-          O Laravel PRO não é só uma coleção de aulas soltas. A ideia é te mostrar como as partes de um backend SaaS se conectam: API, autenticação, arquitetura, tenant, permissões e deploy.
+          O Laravel PRO não é só uma coleção de aulas soltas. A ideia é te mostrar como as partes de um backend SaaS se conectam: API, autenticação, arquitetura e deploy. Multi-tenancy está em construção e entra no acesso de 1 ano.
         </p>
         <p>
           Durante os 2 dias grátis, você consegue conhecer a didática, navegar pela trilha e entender se esse é o próximo passo certo pra você.
@@ -176,7 +176,7 @@ definePageMeta({
 
 useSeoMeta({
   title: 'Laravel PRO — 2 dias grátis | Tiago Matos',
-  description: 'Teste o Laravel PRO por 2 dias sem cartão. Conheça a trilha de backend SaaS em Laravel: API, auth, tenant, permissões e deploy.',
+  description: 'Teste o Laravel PRO por 2 dias sem cartão. Conheça a trilha de backend SaaS em Laravel: API, auth, arquitetura e deploy. Multi-tenancy em construção.',
 })
 
 const user = ref({})
