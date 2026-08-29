@@ -1,17 +1,19 @@
 <template>
-  <div class="flex flex-col md:flex-row items-center gap-10">
-    <img src="@/assets/img/warranty-14-days.webp">
+  <div class="flex flex-col items-center gap-10 md:flex-row">
+    <div class="flex size-28 shrink-0 items-center justify-center rounded-full bg-primary/15 ring-1 ring-primary/25">
+      <UIcon
+        name="i-lucide-shield-check"
+        class="size-14 text-primary"
+      />
+    </div>
 
     <div>
       <h2 class="heading-4 text-highlighted">
-        Garantia o dobro ou nada!
+        Garantia de 7 dias
       </h2>
-      <p class="text-base text-gray-700 dark:text-gray-400">Acredito tanto na qualidade do meu curso que ofereço uma
-        garantia estendida. Por lei, todo produto digital deve ter pelo menos 7 dias de garantia.</p>
-      <p class="text-xl text-primary font-bold my-4">Aqui, você tem 14 dias para testar o curso.</p>
-      <p class="text-base text-gray-700 dark:text-gray-400">Se, dentro desse período, você sentir que o curso não é para
-        você, eu devolvo 100% do seu investimento, sem perguntas e sem complicações. Sua satisfação é minha
-        prioridade!</p>
+      <p class="text-base text-gray-700 dark:text-gray-400">
+        Se, em 7 dias, você sentir que o curso não é pra você, devolvo 100% do investimento — sem perguntas e sem burocracia.
+      </p>
     </div>
   </div>
 </template>

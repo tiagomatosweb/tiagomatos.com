@@ -76,7 +76,7 @@ const faqs = ref([
   },
   {
     label: 'E se eu me arrepender de me inscrever no curso?',
-    content: '<p>Você terá 14 dias para explorar o curso e decidir se ele é a escolha certa para você. Se dentro desse período você não estiver satisfeito, devolvemos 100% do seu investimento.</p>',
+    content: '<p>Você terá 7 dias para explorar o curso e decidir se ele é a escolha certa para você. Se dentro desse período você não estiver satisfeito, devolvemos 100% do seu investimento.</p>',
   },
   {
     label: 'Quais são as formas de pagamento aceitas?',
