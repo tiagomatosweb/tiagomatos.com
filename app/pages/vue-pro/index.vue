@@ -5,13 +5,11 @@
       :ui="{ root: 'border-b border-default bg-default/80' }"
     >
       <template #title>
-        <span class="flex items-center gap-2">
-          <UIcon
-            name="i-custom-vue"
-            class="size-8 text-vue"
-          />
-          <span class="font-poppins text-lg font-extrabold tracking-tight">Vue PRO</span>
-        </span>
+        <img
+          :src="vueProLogo"
+          alt="Vue PRO"
+          class="h-auto w-[70px]"
+        >
       </template>
 
       <UNavigationMenu
@@ -1017,6 +1015,7 @@
 import AppFooter from '~/components/App/AppFooter.vue'
 import PageAbout from '~/components/Page/PageAbout.vue'
 import PageTestimonial from '~/components/Page/PageTestimonial.vue'
+import vueProLogo from '~/assets/img/VuePro-WhiteColor.svg'
 
 definePageMeta({
   layout: false,

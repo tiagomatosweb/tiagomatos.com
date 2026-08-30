@@ -1,5 +1,5 @@
 <template>
-  <div :class="cn('text-xl leading-8 space-y-6', props.class)">
+  <div :class="ui({ class: props.class })">
     <p>Sou dev full stack com mais de 20 anos de estrada, especialista em Laravel e Vue.js.</p>
     <p>Hoje atuo como engenheiro de software no mercado australiano e dedico parte do meu tempo a ensinar, de forma
       prática e direta, o que realmente faz diferença na vida de quem quer viver de programação.</p>
@@ -8,9 +8,14 @@
 </template>
 
 <script setup lang="ts">
-import {type HTMLAttributes} from 'vue';
+import type { HTMLAttributes } from 'vue'
+import { tv } from '@nuxt/ui/utils/tv'
 
 const props = defineProps<{
   class?: HTMLAttributes['class']
-}>();
+}>()
+
+const ui = tv({
+  base: 'text-xl leading-8 space-y-6',
+})
 </script>

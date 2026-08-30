@@ -6,6 +6,8 @@ const isProd = process.env.NODE_ENV === 'production';
 
 export default defineNuxtConfig({
   runtimeConfig: {
+    plunkSecretKey: process.env.NUXT_PLUNK_SECRET_KEY || '',
+    plunkApiUrl: process.env.NUXT_PLUNK_API_URL || 'https://plunk-api.tiagomatos.com',
     public: {
       apiURL: process.env.NUXT_PUBLIC_API_URL,
       youtubeApiKey: process.env.NUXT_PUBLIC_YOUTUBE_API_KEY,
@@ -108,6 +110,12 @@ export default defineNuxtConfig({
   // },
 
   vite: {
+    resolve: {
+      dedupe: ['tailwind-merge', 'tailwind-variants'],
+    },
+    optimizeDeps: {
+      include: ['tailwind-merge', 'tailwind-variants'],
+    },
     plugins: isProd
       ? [
           sentryVitePlugin({

@@ -1,15 +1,16 @@
 <template>
-  <div :class="cn(props.class)">
+  <div :class="ui.root({ class: props.class })">
     <UIcon
       name="i-lucide-loader-circle"
-      :class="cn('animate-spin text-primary', props.iconClass)"
+      :class="ui.icon({ class: props.iconClass })"
       :size="props.size"
     />
   </div>
 </template>
 
 <script setup lang="ts">
-import type {HTMLAttributes} from 'vue';
+import type { HTMLAttributes } from 'vue'
+import { tv } from '@nuxt/ui/utils/tv'
 
 const props = withDefaults(defineProps<{
   class?: HTMLAttributes['class']
@@ -19,5 +20,12 @@ const props = withDefaults(defineProps<{
   class: null,
   iconClass: 'text-primary',
   size: '24',
-});
+})
+
+const ui = tv({
+  slots: {
+    root: '',
+    icon: 'animate-spin text-primary',
+  },
+})
 </script>

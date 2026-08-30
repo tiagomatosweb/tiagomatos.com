@@ -1,4 +1,5 @@
 import laravelProLogo from '~/assets/img/LaravelPro-WhiteColor.svg'
+import vueProLogo from '~/assets/img/VuePro-WhiteColor.svg'
 
 export const lpLogos = {
   'laravel-pro': {
@@ -6,5 +7,11 @@ export const lpLogos = {
     alt: 'Laravel PRO',
     width: '105',
     to: { name: 'laravel-pro' },
+  },
+  'vue-pro': {
+    src: vueProLogo,
+    alt: 'Vue PRO',
+    width: '70',
+    to: { name: 'vue-pro' },
   },
 }

@@ -100,8 +100,7 @@ const props = defineProps({
 
 const defaultUi = {
   root: 'border-t border-default',
-  container: 'max-w-5xl',
-  wrapper: 'items-start text-left',
+  wrapper: 'items-start text-left mx-auto w-full max-w-5xl',
   headline: 'justify-start text-laravel',
   title: 'text-3xl sm:text-4xl lg:text-4xl font-extrabold leading-tighter tracking-tight text-left',
   description: 'text-left max-w-3xl',

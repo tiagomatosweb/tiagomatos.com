@@ -171,6 +171,7 @@ import PageAbout from '~/components/Page/PageAbout.vue'
 
 definePageMeta({
   layout: 'lp',
+  logo: 'vue-pro',
 })
 
 useSeoMeta({

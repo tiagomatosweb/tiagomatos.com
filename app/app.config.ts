@@ -4,6 +4,15 @@ export default defineAppConfig({
       primary: 'blue',
       neutral: 'gray',
     },
+    tv: {
+      twMergeConfig: {
+        extend: {
+          classGroups: {
+            'max-w': ['max-w-(--ui-container)'],
+          },
+        },
+      },
+    },
     input: {
       slots: {
         root: 'w-full',
