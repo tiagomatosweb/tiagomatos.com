@@ -4,6 +4,7 @@
 .nitro
 .cache
 .data
+.wrangler
 dist
 
 # Node dependencies

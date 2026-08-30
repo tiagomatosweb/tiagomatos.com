@@ -745,7 +745,10 @@
       </template>
     </UPageSection>
 
-    <PageTestimonial />
+    <PageTryFirst
+      accent="laravel"
+      :to="freeTrialLink"
+    />
 
     <!-- Oferta -->
     <UPageSection
@@ -1014,7 +1017,7 @@
 <script setup>
 import AppFooter from '~/components/App/AppFooter.vue'
 import PageAbout from '~/components/Page/PageAbout.vue'
-import PageTestimonial from '~/components/Page/PageTestimonial.vue'
+import PageTryFirst from '~/components/Page/PageTryFirst.vue'
 import laravelProLogo from '~/assets/img/LaravelPro-WhiteColor.svg'
 
 definePageMeta({
@@ -1239,6 +1242,7 @@ const offerProgramDetails = [
 
 const offerIncludedBenefits = [
   '1 ano de acesso ilimitado',
+  'AgendaMe e Masterclass inclusos no acesso',
   'Suporte direto comigo via WhatsApp',
   'Grupo exclusivo de alunos no WhatsApp',
   'Novas aulas adicionadas regularmente',
@@ -1321,6 +1325,10 @@ const faqItems = [
   {
     label: 'Qual a diferença para um starter kit?',
     content: '<p>Starter kit entrega código pronto. O Laravel PRO te ensina a construir auth, API, arquitetura e deploy — pra você não depender de uma caixa-preta quando o SaaS crescer.</p>',
+  },
+  {
+    label: 'O Laravel PRO inclui o AgendaMe e a Masterclass?',
+    content: '<p>Sim. Quem entra no Laravel PRO também acessa o AgendaMe e a Masterclass.</p><p>Vue PRO continua sendo curso separado.</p>',
   },
   {
     label: 'Por quanto tempo tenho acesso?',

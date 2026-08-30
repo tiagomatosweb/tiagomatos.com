@@ -125,8 +125,6 @@
       </template>
     </UPageSection>
 
-    <PageTestimonial />
-
     <PageAbout />
 
     <UPageCTA
@@ -166,7 +164,6 @@
 <script setup>
 import CodeIDE from '~/components/Codesnippet/CodeIDE.vue'
 import StartTrialForm from '~/components/Leadgen/StartTrialForm.vue'
-import PageTestimonial from '~/components/Page/PageTestimonial.vue'
 import PageAbout from '~/components/Page/PageAbout.vue'
 
 definePageMeta({

@@ -43,14 +43,17 @@
       </CodeIDE>
     </UPageSection>
 
-    <PageTestimonial/>
+    <PageTryFirst
+      accent="vue"
+      :to="{ name: 'vue-pro-2-dias-gratis' }"
+    />
   </div>
 </template>
 
 <script setup>
 import CodeIDE from '~/components/Codesnippet/CodeIDE.vue';
 import LeadGenForm from '~/components/Leadgen/LeadGenForm.vue';
-import PageTestimonial from '~/components/Page/PageTestimonial.vue';
+import PageTryFirst from '~/components/Page/PageTryFirst.vue'
 
 definePageMeta({
   layout: 'lp',

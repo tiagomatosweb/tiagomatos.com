@@ -54,14 +54,12 @@
       </CodeIDE>
     </UPageSection>
 
-    <PageTestimonial />
   </div>
 </template>
 
 <script setup>
 import CodeIDE from '~/components/Codesnippet/CodeIDE.vue'
 import NewsletterSubscribeForm from '~/components/Newsletter/NewsletterSubscribeForm.vue'
-import PageTestimonial from '~/components/Page/PageTestimonial.vue'
 
 definePageMeta({
   layout: 'lp',

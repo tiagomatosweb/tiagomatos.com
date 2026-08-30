@@ -745,7 +745,10 @@
       </template>
     </UPageSection>
 
-    <PageTestimonial />
+    <PageTryFirst
+      accent="vue"
+      :to="freeTrialLink"
+    />
 
     <!-- Oferta -->
     <UPageSection
@@ -1014,7 +1017,7 @@
 <script setup>
 import AppFooter from '~/components/App/AppFooter.vue'
 import PageAbout from '~/components/Page/PageAbout.vue'
-import PageTestimonial from '~/components/Page/PageTestimonial.vue'
+import PageTryFirst from '~/components/Page/PageTryFirst.vue'
 import vueProLogo from '~/assets/img/VuePro-WhiteColor.svg'
 
 definePageMeta({
@@ -1239,6 +1242,7 @@ const offerProgramDetails = [
 
 const offerIncludedBenefits = [
   '1 ano de acesso ilimitado',
+  'AgendaMe e Masterclass inclusos no acesso',
   'Suporte direto comigo via WhatsApp',
   'Grupo exclusivo de alunos no WhatsApp',
   'Novas aulas adicionadas regularmente',
@@ -1321,8 +1325,8 @@ const faqItems = [
     content: '<p>A Tarefinha (lista reativa), um carrinho com Vuetify pra cravar composables, e uma ordem de serviço com Pinia. No fim, deploy da SPA.</p>',
   },
   {
-    label: 'O Vue PRO inclui Laravel ou o AgendaMe?',
-    content: '<p>Não. Vue PRO é só a trilha de frontend. Laravel PRO e AgendaMe são cursos separados.</p>',
+    label: 'O Vue PRO inclui Laravel, AgendaMe ou a Masterclass?',
+    content: '<p>Laravel PRO não — é curso separado.</p><p>AgendaMe e a Masterclass entram no acesso: quem tem Vue PRO já acessa os dois.</p>',
   },
   {
     label: 'Por quanto tempo tenho acesso?',

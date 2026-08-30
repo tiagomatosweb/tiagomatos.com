@@ -5,6 +5,14 @@ const {resolve} = createResolver(import.meta.url);
 const isProd = process.env.NODE_ENV === 'production';
 
 export default defineNuxtConfig({
+  nitro: {
+    preset: 'cloudflare_module',
+    cloudflare: {
+      deployConfig: true,
+      nodeCompat: true,
+    },
+  },
+
   runtimeConfig: {
     plunkSecretKey: process.env.NUXT_PLUNK_SECRET_KEY || '',
     plunkApiUrl: process.env.NUXT_PLUNK_API_URL || 'https://plunk-api.tiagomatos.com',
