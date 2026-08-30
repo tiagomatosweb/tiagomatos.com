@@ -23,8 +23,6 @@
 </template>
 
 <script setup>
-// import Ebooks from '@/components/Ebooks.vue'
-// import Aulao from '@/components/Aulao.vue';
 import AboutGreetings from '~/components/About/AboutGreetings.vue';
 import AboutSocialMedia from '~/components/About/AboutSocialMedia.vue';
 import YoutubeLatestVideos from '~/components/Youtube/YoutubeLatestVideos.vue';
